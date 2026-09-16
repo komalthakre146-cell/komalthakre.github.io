@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komal Thakre — UI/UX Designer</title>
+  <meta name="description" content="Komal Thakre — UI/UX Designer with 12+ years of experience in digital and print design, based in Dubai." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="global-nav">
+    <div class="nav-content">
+      <a class="nav-logo" href="#top" aria-label="Komal Thakre home">KT</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-action" href="mailto:komalthakre146@gmail.com">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <path d="M9 1.5C5.25 1.5 2.25 4.5 2.25 8.25C2.25 12 5.25 15 9 15C12.75 15 15.75 12 15.75 8.25C15.75 4.5 12.75 1.5 9 1.5ZM9 13.5C6.075 13.5 3.75 11.175 3.75 8.25C3.75 5.325 6.075 3 9 3C11.925 3 14.25 5.325 14.25 8.25C14.25 11.175 11.925 13.5 9 13.5Z" fill="currentColor"/>
+          <path d="M9 5.25V8.25L11.25 9.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content reveal">
+        <h1 class="hero-headline">Komal Thakre</h1>
+        <p class="hero-subhead">UI/UX Designer. Crafting clarity for digital &amp; print.</p>
+        <div class="hero-cta">
+          <a class="link-more" href="#work">View work</a>
+          <a class="link-more" href="mailto:komalthakre146@gmail.com">Get in touch</a>
+          <a class="link-more" href="assets/Komal-Thakre-CV.pdf" download>Download CV</a>
+         
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <img
+          src="assets/hero-cover.jpg"
+          alt="Designer's hands typing at a keyboard surrounded by color wheels, color swatch sheets, a drawing tablet, and pencils"
+          width="1671"
+          height="941"
+        />
+      </div>
+    </section>
+
+    <section id="about" class="section section-light">
+      <div class="section-intro reveal">
+        <h2 class="section-headline">Design that feels<br />effortless.</h2>
+        <p class="section-copy">
+          Nine years designing interfaces, brands, and bill experiences for telecom and global clients
+        </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <p class="feature-stat">9+</p>
+          <h3>Years of experience</h3>
+          <p>UI/UX design for print and digital media across telecom, fintech, and events.</p>
+        </article>
+        <article class="feature-card reveal">
+          <p class="feature-stat">30+</p>
+          <h3>Websites designed</h3>
+          <p>From mockups in Photoshop to production-ready HTML, CSS, and Bootstrap builds.</p>
+        </article>
+        <article class="feature-card reveal">
+          <p class="feature-stat">5K+</p>
+          <h3>Creative artifacts</h3>
+          <p>Posters, banners, magazines, logos, standees, and event media for real and virtual events.</p>
+        </article>
+      </div>
+      <div class="about-detail reveal">
+        <p>
+          Creative and versatile UI/UX & Visual Designer with 12+ years of experience delivering user-focused digital experiences, websites, branding, 
+          and digital/print media across diverse industries including Telecommunications, Remittance & Financial Services, Travel & Tourism, Events & 
+          Entertainment, IT, and Advertising & Creative Services.
+        </p>
+      </div>
+    </section>
+
+    <section id="work" class="section section-gray work-section">
+      <div class="section-intro reveal">
+        <h2 class="section-headline">Selected work.</h2>
+        <p class="section-copy">Digital, print, and brand design for Xpress Money, Novo Elite Group, and Amdocs.</p>
+      </div>
+
+      <div class="work-filters reveal" role="tablist" aria-label="Filter portfolio work">
+        <button class="filter-btn is-active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" type="button" data-filter="xpress" role="tab" aria-selected="false">Xpress Money</button>
+        <button class="filter-btn" type="button" data-filter="novo" role="tab" aria-selected="false">Novo Elite</button>
+        <button class="filter-btn" type="button" data-filter="amdocs" role="tab" aria-selected="false">Amdocs</button>
+        <button class="filter-btn" type="button" data-filter="digital" role="tab" aria-selected="false">Digital</button>
+        <button class="filter-btn" type="button" data-filter="print" role="tab" aria-selected="false">Print</button>
+        <button class="filter-btn" type="button" data-filter="branding" role="tab" aria-selected="false">Branding</button>
+      </div>
+
+      <div class="work-grid" id="work-grid" aria-live="polite"></div>
+
+      <p class="work-count" id="work-count"></p>
+    </section>
+
+    <div class="lightbox" id="lightbox" hidden aria-hidden="true">
+      <div class="lightbox-backdrop" data-close></div>
+      <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <button class="lightbox-close" type="button" aria-label="Close" data-close>&times;</button>
+        <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous project">&lsaquo;</button>
+        <figure class="lightbox-figure">
+          <img id="lightbox-image" src="" alt="" />
+          <figcaption>
+            <p class="lightbox-type" id="lightbox-type"></p>
+            <h3 id="lightbox-title"></h3>
+            <p class="lightbox-client" id="lightbox-client"></p>
+          </figcaption>
+        </figure>
+        <button class="lightbox-nav lightbox-next" type="button" aria-label="Next project">&rsaquo;</button>
+      </div>
+    </div>
+
+    <section class="section section-dark showcase">
+      <div class="showcase-inner reveal">
+        <p class="showcase-label">Specialty</p>
+        <h2 class="showcase-headline">Telecom billing.<br />Designed to spec.</h2>
+        <p class="showcase-copy">
+          Comprehensive style guidelines, digital bill mockup prototypes, and production assets — verified error-free and built to the highest standard.
+        </p>
+        <a class="link-more link-more-light" href="#work">View portfolio</a>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-light">
+      <div class="section-intro reveal">
+        <h2 class="section-headline">Experience.</h2>
+        <p class="section-copy">Roles that shaped how I design at scale.</p>
+      </div>
+
+      <div class="experience-list">
+        <article class="exp-card reveal">
+          <div class="exp-header">
+            <div>
+              <h3>Interactive Designer</h3>
+              <p class="exp-company">Amdocs <span>(via Nityo Infotech)</span></p>
+            </div>
+            <p class="exp-date">Jun 2024 – Aug 2026</p>
+          </div>
+          <p class="exp-location">Pune</p>
+          <ul>
+            <li>Create interfaces for paper (PDF) and digital bills for worldwide telecom providers</li>
+            <li>Build layout specifications and style guidelines for bill designs</li>
+            <li>Produce digital bill mockup prototypes for stakeholder review</li>
+            <li>Partner with development and testing teams through implementation and QA</li>
+          </ul>
+        </article>
+
+        <article class="exp-card reveal">
+          <div class="exp-header">
+            <div>
+              <h3>Interactive Designer</h3>
+              <p class="exp-company">Amdocs</p>
+            </div>
+            <p class="exp-date">Dec 2021 – Jan 2024</p>
+          </div>
+          <p class="exp-location">Pune</p>
+          <ul>
+            <li>Designed UI for PDF and digital billing experiences for global telecom clients</li>
+            <li>Verified design documents against requirements and production standards</li>
+            <li>Delivered production assets and continuous support during deployment</li>
+          </ul>
+        </article>
+
+        <article class="exp-card reveal">
+          <div class="exp-header">
+            <div>
+              <h3>Digital Visualizer</h3>
+              <p class="exp-company">Xpress Money (UAE Exchange)</p>
+            </div>
+            <p class="exp-date">Sep 2018 – Sep 2019</p>
+          </div>
+          <p class="exp-location">Dubai</p>
+          <ul>
+            <li>Created digital, print, and video content for brand and regional initiatives</li>
+            <li>Designed web layouts and emailers, converted to HTML/CSS and Mailchimp campaigns</li>
+            <li>Built microsites and landing pages for promotions and campaigns</li>
+          </ul>
+        </article>
+
+        <article class="exp-card reveal">
+          <div class="exp-header">
+            <div>
+              <h3>Creative Designer</h3>
+              <p class="exp-company">Novo Elite Group</p>
+            </div>
+            <p class="exp-date">Feb 2017 – Aug 2018</p>
+          </div>
+          <p class="exp-location">Dubai</p>
+          <ul>
+            <li>Designed and maintained the Novoevents website with live and past event updates</li>
+            <li>Created event artifacts — posters, standees, ads, social posts, and rollups</li>
+            <li>Produced marketing flyers, banners, brochures, mailers, and branding videos</li>
+          </ul>
+        </article>
+
+        <article class="exp-card reveal">
+          <div class="exp-header">
+            <div>
+              <h3>Design Associate</h3>
+              <p class="exp-company">InfoCepts Technologies</p>
+            </div>
+            <p class="exp-date">Dec 2015 – Nov 2016</p>
+          </div>
+          <p class="exp-location">Nagpur</p>
+          <ul>
+            <li>Owned design and publication of monthly and quarterly magazines Pulse and Sparsh</li>
+            <li>Delivered digital and print artifacts for marketing, HR, and internal communications</li>
+          </ul>
+        </article>
+
+        <article class="exp-card reveal">
+          <div class="exp-header">
+            <div>
+              <h3>Web Designer / Developer</h3>
+              <p class="exp-company">Ccube</p>
+            </div>
+            <p class="exp-date">Nov 2013 – Dec 2015</p>
+          </div>
+          <p class="exp-location">Nagpur</p>
+          <ul>
+            <li>Designed website mockups in Photoshop and built layouts with HTML/CSS/Bootstrap</li>
+            <li>Maintained, expanded, and scaled client websites using HTML5 and CSS3</li>
+          </ul>
+        </article>
+
+        <article class="exp-card reveal">
+          <div class="exp-header">
+            <div>
+              <h3>Web Designer</h3>
+              <p class="exp-company">Esence IT Solution</p>
+            </div>
+            <p class="exp-date">Jun 2013 – Oct 2013</p>
+          </div>
+          <p class="exp-location">Nagpur</p>
+          <ul>
+            <li>Early career role focused on web design foundations and client deliverables</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-gray">
+      <div class="section-intro reveal">
+        <h2 class="section-headline">Tools &amp; craft.</h2>
+        <p class="section-copy">Everything I use to bring ideas to life.</p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-tile reveal">
+          <h3>Design</h3>
+          <p>Photoshop · Illustrator · InDesign · Figma · Sketch · After Effects</p>
+        </article>
+        <article class="skill-tile reveal">
+          <h3>Development</h3>
+          <p>HTML5 · CSS3 · JavaScript · Bootstrap · WordPress · Mailchimp</p>
+        </article>
+        <article class="skill-tile reveal">
+          <h3>Practice</h3>
+          <p>Responsive layout · Pixel-perfect design · Web usability · SEO · E-commerce · Video editing</p>
+        </article>
+      </div>
+
+      <div class="edu-block reveal">
+        <p class="edu-label">Education</p>
+        <h3>BE in Computer Technology</h3>
+        <p>RTMNU University / KITS Ramtek · 2013</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-light contact-section">
+      <div class="contact-block reveal">
+        <h2 class="section-headline">Let’s create<br />something beautiful.</h2>
+        <p class="section-copy">Open to UI/UX, interactive design, and brand systems work.</p>
+        <div class="contact-cta">
+          <a class="link-more" href="mailto:komalthakre146@gmail.com">komalthakre146@gmail.com</a>
+          <a class="link-more" href="tel:+971555034984">+971 555 034 984</a>
+          <a class="link-more" href="https://komalthakre.in" target="_blank" rel="noopener noreferrer">komalthakre.in</a>
+        </div>
+        <p class="contact-location">DSO, Dubai</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-note">Copyright © <span id="year"></span> Komal Thakre. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/portfolio/portfolio-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
